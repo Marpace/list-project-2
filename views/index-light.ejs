@@ -1,0 +1,60 @@
+<%- include("partials/header", {theme: "light"}) %> 
+
+<header>
+    <h1>TODO</h1>
+    <form action="/dark-theme" method="POST" class="dark-form">
+        <button type="submit">
+            <img class="icon-moon js-icon-moon" src="/images/icon-moon.svg" alt="half moon">
+        </button>
+    </form>
+    <form action="/light-theme" method="POST" class="light-form" style="display: none;">
+        <button type="submit">
+            <img class="icon-sun js-icon-sun" src="/images/icon-sun.svg" alt="sun">
+        </button>
+    </form>
+</header>
+<main>
+    <%- include("partials/input-form", {theme: "light"}) %> 
+
+    <div class="todo-list todo-list-light">
+
+        <% items.forEach(item => { %>
+
+            <%- include("partials/list-item", 
+            {content: item.content, 
+            itemId: item.id, 
+            theme: "light", 
+            status: item.status}) 
+            %>  
+            
+        <% }); %>
+
+
+    
+
+    </div>
+    <div class="todo-list__footer bg-light">
+        <span class="js-pending">1 item left</span>
+        <div class="todo-list__footer-filter">
+            <span class="all">All</span>
+            <span class="active">Active</span>
+            <span class="completed">Completed</span>
+        </div>
+        <form action="/clear-completed" method="POST" class="clear-completed">
+
+            <button class="completed-submit-btn" type="submit">Clear completed</button>
+        </form>
+    </div>
+
+    <div class="filter bg-light">
+        <span class="all">All</span>
+        <span class="active">Active</span>
+        <span class="completed">Completed</span>
+    </div>
+
+    <p class="bottom-text">Drag and drop to reorder list</p>
+
+
+</main>
+
+<%- include("partials/footer") %> 

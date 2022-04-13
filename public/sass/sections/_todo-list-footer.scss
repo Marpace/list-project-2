@@ -1,0 +1,34 @@
+.todo-list__footer {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        font-size: .8rem;
+        color: $dark_grayish_blue;
+        @include flex_centered(row);
+    }
+    &-filter {
+        display: none;
+        gap: 10px;
+        @include responsive($tablet_large){
+            display: flex;
+        }
+        
+        span {
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+    .completed-submit-btn {
+        background: none;
+        border: none;
+        font-size: .8rem;
+        color: $dark_grayish_blue;
+        cursor: pointer;
+    }
+}
+.todo-list__footer:last-child {
+    border-radius: 0 0 5px 5px;
+}

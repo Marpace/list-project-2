@@ -1,0 +1,14 @@
+<div class="todo-list__item bg-<%-theme%> <%-status%>">
+    <form action="/check-item" method="POST" class="todo-list__item-check border-<%-theme%>">
+        <input type="hidden" name="itemId" value="<%- itemId %>">
+       <button type="submit" class="js-item-check"><img class="icon-check js-icon-check" src="/images/icon-check.svg" alt=""></button>  
+    </form>
+    <span class="todo-list__item-text js-item-text text-<%-theme%>"><%- content %></span>
+    <div class="todo-list__item-close">
+        <form class="delete-form" action="/delete-item" method="POST">
+            <input class="item-id" type="hidden" name="itemId" value="<%- itemId %>">
+            <button type="submit"><img class="item-close__img" src="/images/icon-cross.svg" alt=""></button>
+        </form>
+    </div>
+</div>
+

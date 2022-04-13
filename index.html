@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Google fonts  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+ 
+     <!-- Custom CSS  -->
+     <link rel="stylesheet" href="public/sass/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>TODO</h1>
+        <img class="icon-sun js-icon-sun" src="public/images/icon-sun.svg" alt="">
+        <img class="icon-moon js-icon-moon" src="public/images/icon-moon.svg" alt="">
+    </header>
+    <main>
+        <form action="/create-new-item" class="new-item-input">
+            <input type="text" placeholder="Create a new todo...">
+            <button type="submit" class="input-submit">ADD</button>
+        </form>
+
+        <div class="todo-list">
+            <div class="todo-list__item">
+                <div class="todo-list__item-check js-item-check">
+                    <img class="icon-check js-icon-check" src="public/images/icon-check.svg" alt="">
+                </div>
+                <span class="todo-list__item-text js-item-text">Complete online javascript course</span>
+                <div class="todo-list__item-close">
+                    <img class="item-close__img" src="public/images/icon-cross.svg" alt="">
+                </div>
+            </div>
+            <div class="todo-list__item">
+                <div class="todo-list__item-check">
+                    <img class="icon-check" src="public/images/icon-check.svg" alt="">
+                </div>
+                <span class="todo-list__item-text">Complete online javascript course</span>
+                <div class="todo-list__item-close">
+                    <img class="item-close__img" src="public/images/icon-cross.svg" alt="">
+                </div>
+            </div>
+            <div class="todo-list__item">
+                <div class="todo-list__item-check">
+                    <img class="icon-check" src="public/images/icon-check.svg" alt="">
+                </div>
+                <span class="todo-list__item-text">Complete online javascript course</span>
+                <div class="todo-list__item-close">
+                    <img class="item-close__img" src="public/images/icon-cross.svg" alt="">
+                </div>
+            </div>
+
+
+            <div class="todo-list__footer">
+                <span>1 item left</span>
+                <div class="todo-list__footer-filter">
+                    <span>All</span>
+                    <span>Active</span>
+                    <span>Completed</span>
+                </div>
+                <span>Clear completed</span>
+            </div>
+
+        </div>
+        
+        <div class="filter">
+            <span>All</span>
+            <span>Active</span>
+            <span>Completed</span>
+        </div>
+
+
+    </main>
+
+
+<script type="text/javascript" src="public/js/index.js"></script>
+
+</body>
+</html>

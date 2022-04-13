@@ -1,0 +1,82 @@
+main {
+    width: 85%;
+    max-width: 500px;
+}
+
+
+// Dark them classes 
+.bg-dark {
+    background: hsl(235, 24%, 19%);
+}
+.input-text-dark {
+    color: $light_grayish_blue_dark;
+}
+.text-dark {
+    color: hsl(234, 39%, 85%);
+}
+.todo-list-dark {
+    background-color: #393a4c;
+}
+.todo-list-dark::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 90%;
+    height: 2px;
+    z-index: -1;
+    box-shadow: 0 5px 25px 3px rgb(19, 19, 19);
+}
+.border-dark {
+    border: 1px solid hsl(237, 14%, 26%);
+}
+.body-dark {
+    background-image: url("../images/bg-mobile-dark.jpg");
+    @include responsive($tablet_large){
+        background-image: url("../images/bg-desktop-dark.jpg");
+    }
+    background-color: hsl(235, 21%, 11%);
+}
+
+
+//Light theme classes 
+.bg-light {
+    background: hsl(0, 0%, 98%);
+}
+.text-light {
+    color: hsl(235, 19%, 35%);
+}
+.input-text-light {
+    color: $very_dark_grayish_blue;
+}
+.todo-list-light {
+    background-color: hsl(233, 11%, 84%);
+}
+.todo-list-light::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 90%;
+    height: 2px;
+    z-index: -1;
+    box-shadow: 0 5px 25px 1px rgb(100, 100, 100);
+}
+.border-light {
+    border: 1px solid hsl(233, 11%, 84%);
+}
+.body-light {
+    background-image: url("../images/bg-mobile-light.jpg");
+    @include responsive($tablet_large){
+        background-image: url("../images/bg-desktop-light.jpg");
+    }
+    background-color: hsl(236, 33%, 92%);
+}
+
+
+.bottom-text {
+    margin: 50px 0; 
+    color: hsl(233, 14%, 35%); 
+    text-align: center;
+    font-size: .8rem;
+}

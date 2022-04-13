@@ -1,0 +1,15 @@
+.filter {
+    padding: 20px 70px;
+    margin: 20px 0;
+    @include flex_centered(row);
+    justify-content: space-evenly;
+    @include responsive($tablet_large){
+        display: none;
+    }
+
+    span {
+        color: $dark_grayish_blue;
+        font-size: .8rem;
+        font-weight: 700;
+    }
+}
